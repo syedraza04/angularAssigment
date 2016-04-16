@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app="copyExample">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="styles/main.css">
+   </head>
+<body>
+	<div ng-controller="ExampleController">
+	<div class="col-md-6">
+		<form novalidate class="simple-form">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Enter Number</label>
+				<input type="text" ng-model="user.name" class="form-control"  placeholder="Number">
+			</div>
+			<button type="submit"  ng-click="myStyle={'width':user.name+'%'}" class="btn btn-default">Submit</button>
+		</form>	  
+	</div>	
+	<br /><br />
+	<div class="col-md-6">
+		<div class="progress">
+			<div class="progress-bar" role="progressbar" aria-valuenow="user.name"
+				aria-valuemin="0" aria-valuemax="100" ng-style="myStyle" >
+				{{user.name}}%
+			</div>
+		</div>
+	</div>
+</div>
+	<script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
